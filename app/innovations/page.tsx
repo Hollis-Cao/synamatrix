@@ -1,0 +1,3 @@
+import Link from "next/link";
+import { innovations } from "../data";
+export default function InnovationsPage(){return <main className="page-shell"><header className="page-intro"><p>CORE INNOVATIONS</p><h1>核心创新点</h1><span>创新归创新。用关键问题判断一项工作是否真正推动了 BCI，而不是只看更高的精度或更多的通道。点击任意问题进入完整判断框架。</span></header><div className="innovation-list">{innovations.map((x,i)=><article id={x.id} key={x.id}><Link className="innovation-card-link" href={"/innovations/"+x.id}><span>{String(i+1).padStart(2,"0")}</span><div><p>{x.question}</p><h2>{x.title}</h2><p>{x.answer}</p><small>观察指标 · {x.metric}</small></div><b>进入判断框架 ↗</b></Link></article>)}</div></main>}

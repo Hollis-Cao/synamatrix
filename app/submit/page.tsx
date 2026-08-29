@@ -1,0 +1,2 @@
+import { SubmissionForm } from "../components/submission-form";
+export default function SubmitPage(){return <main className="page-shell submit-page"><header className="page-intro compact"><p>CONTRIBUTE</p><h1>提交资源与讨论</h1><span>你可以推荐论文、产品和技术资料，也可以提交纠错或发起专题讨论。投稿不会自动公开，只有站主审核账号可以发布。</span></header><div className="submit-layout"><SubmissionForm/><aside><p>优先收录</p><ul><li>论文或预印本原文</li><li>监管和临床试验资料</li><li>实验室或厂商技术页面</li><li>有具体问题意识的技术分析</li></ul><p>暂不收录</p><ul><li>无法核实来源的二手消息</li><li>只有宣传口号的融资新闻</li><li>侵犯隐私或患者权益的材料</li></ul></aside></div></main>}

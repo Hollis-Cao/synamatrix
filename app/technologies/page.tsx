@@ -1,0 +1,3 @@
+import Link from "next/link";
+import { technologies } from "../data";
+export default function TechnologiesPage(){return <main className="page-shell"><header className="page-intro"><p>EMERGING TECHNOLOGIES</p><h1>新技术雷达</h1><span>技术归技术。追踪正在改变 BCI 系统能力边界的模型、材料、芯片和临床路线。点击任意卡片进入技术详情。</span></header><div className="tech-grid">{technologies.map((t,i)=><article id={t.id} key={t.id}><Link className="tech-card-link" href={"/technologies/"+t.id}><div><span>{t.tag}</span><b>{String(i+1).padStart(2,"0")}</b></div><h2>{t.title}</h2><p>{t.summary}</p><small>成熟度：{t.maturity}</small><ul>{t.points.map(x=><li key={x}>{x}</li>)}</ul></Link></article>)}</div></main>}
